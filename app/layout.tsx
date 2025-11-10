@@ -6,8 +6,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
-      <body>{children}</body>
+    <html lang="zh-CN">
+      <body>
+        <header>头部</header>
+        <main>{children}</main>
+        <footer>尾部</footer>
+      </body>
     </html>
   );
 }
