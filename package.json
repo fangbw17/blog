@@ -9,11 +9,13 @@
   "dependencies": {
     "next": "^16.0.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@types/node": "24.10.0",
     "@types/react": "19.2.2",
+    "@types/styled-components": "^5.1.35",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.1",
     "eslint-config-prettier": "^10.1.8",
