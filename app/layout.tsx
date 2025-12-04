@@ -4,8 +4,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import Providers from "@/components/providers";
 // import { Analytics } from '@vercel/analytics/react'; // Vercel 数据分析工具
+
+import StyleRegistry from "@/components/style-registry";
+// import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,17 +42,23 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className="light">
       <body className={`font-sans ${inter.className} antialiased`}>
-        <Providers>
-          <div className="min-h-screen flex flex-col">
+        <StyleRegistry>
+          <div
+            style={{
+              minHeight: "100vh",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
             <Suspense fallback={<div>Loading...</div>}>
               <Navigation />
             </Suspense>
-            <main className="flex-1">{children}</main>
+            <main style={{ flex: 1 }}>{children}</main>
             <Suspense fallback={<div>Loading...</div>}>
               <Footer />
             </Suspense>
           </div>
-        </Providers>
+        </StyleRegistry>
         {/* <Analytics /> */}
       </body>
     </html>
