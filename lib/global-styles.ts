@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     transition: all ${({ theme }) => theme.transitions.normal};
 
     &:hover {
-      color: ${({ theme }) => theme.colors.accent};
+      color: ${({ theme }) => theme.colors.accent}; 
     }
   }
 
