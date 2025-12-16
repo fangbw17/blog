@@ -137,14 +137,14 @@ const MetaInfo = styled.div`
   margin-bottom: 0.75rem;
 `
 
-const CardTitle = styled(Link)<{ featured?: boolean }>`
+const CardTitle = styled(Link)<{ $featured?: boolean }>`
   display: block;
   font-family: serif;
   font-weight: 700;
   margin-bottom: 0.75rem;
   line-height: 1.4;
   transition: color 0.2s ease;
-  font-size: ${(props) => (props.featured ? "1.5rem" : "1.25rem")};
+  font-size: ${(props) => (props.$featured ? "1.5rem" : "1.25rem")};
   color: ${colors.foreground};
 
   &:hover {
@@ -232,7 +232,7 @@ export default function ArticleCard({
           <span>{readTime}</span>
         </MetaInfo>
 
-        <CardTitle href={`/articles/${slug}`} featured={featured}>{title}</CardTitle>
+        <CardTitle href={`/articles/${slug}`} $featured={featured}>{title}</CardTitle>
 
         <CardExcerpt>{excerpt}</CardExcerpt>
 
